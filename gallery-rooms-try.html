@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Rhinoslider 1.05</title>
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<link type="text/css" rel="stylesheet" href="css/rhinoslider-1.05.css" />
+		<link type="text/css" rel="stylesheet" href="css/tabulous.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script type="text/javascript" src="js/rhinoslider-1.05.min.js"></script>
+		<script type="text/javascript" src="js/tabulous.js"></script>
+		<script type="text/javascript" src="js/mousewheel.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#rooms_slider').rhinoslider();
+				$('#lounges_slider').rhinoslider({
+					effect: 'shuffle',
+					showTime: 5000,
+					autoPlay: true,
+					slidePrevDirection: 'toRight',
+					slideNextDirection: 'toLeft'
+				});
+				$('#tabs').tabulous({
+					effect: 'scale'
+				});
+			});
+		</script>
+		<style type="text/css">
+			body { background-color:#000; }
+			
+			#rooms_slider,
+			#lounges_slider {
+				width:800px;
+				height:350px;
+				
+				/*IE bugfix*/
+				padding:0;
+				margin:0;
+			}
+			
+			#rooms_slider li,
+			#lounges_slider li { list-style:none; }
+			
+			#page {
+				width:600px;
+				margin:50px auto;
+			}
+		</style>
+	</head>
+	<body>
+	
+	<div id="tabs">
+		<ul>
+			<li><a href="#rooms" title="">Rooms</a></li>
+			<li><a href="#lounges" title="">Lounges</a></li>
+		</ul>
+
+		<div id="tabs_container">
+		<div id="rooms">
+			<ul id="rooms_slider">
+				<li><img src="img/slider/01.jpg" alt="" /></li>
+				<li><img src="img/slider/02.jpg" alt="" /></li>
+				<li><img src="img/slider/03.jpg" alt="" /></li>
+				<li><img src="img/slider/04.jpg" alt="" /></li>
+				<li><img src="img/slider/05.jpg" alt="" /></li>
+			</ul>
+		</div>
+
+		<div id="lounges">
+			    <ul id="lounges_slider">
+				<li><img src="img/slider/01.jpg" alt="" /></li>
+				<li><img src="img/slider/02.jpg" alt="" /></li>
+				<li><img src="img/slider/03.jpg" alt="" /></li>
+				<li><img src="img/slider/04.jpg" alt="" /></li>
+				<li><img src="img/slider/05.jpg" alt="" /></li>
+			</ul>
+		</div>
+
+		</div><!--End tabs container-->
+		
+	</div><!--End tabs-->
+
+	</body>
+</html>
